@@ -1,0 +1,32 @@
+---
+cluster: "katana"
+form:
+  - version
+  - bc_num_hours
+  - num_cores
+  - bc_vnc_resolution
+  - bc_email_on_started
+attributes:
+  bc_num_hours:
+    help: >-
+      <a href="https://unsw-restech.github.io/using_katana/running_jobs.html#tips-for-using-pbs-and-katana-effectively">Tips for using Katana effectively</a>
+  num_cores:
+    id: num_cores
+    widget: number_field
+    label: "Number of cores"
+    value: 1
+    min: 0
+    max: 48
+    step: 1
+    help: >-
+      Number of cores, 4 GB per core.
+  bc_vnc_resolution:
+    required: true
+  version:
+    widget: select
+    label: "Marc Mentat version"
+    help: >-
+      This defines the version of Marc Mentat you want to use.
+    options:
+      - [ "2019.1", "mentat/2019.1" ]
+      - [ "2018.1", "mentat/2018.1" ]
