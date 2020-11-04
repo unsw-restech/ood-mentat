@@ -13,9 +13,9 @@ function fix_num_cores() {
     }
 
     if (node_type === 'hugemem') {
-	set_ppn_owens_hugemem(num_cores_input);
+	set_ppn_hugemem(num_cores_input);
     } else {
-	set_ppn_owens_regular(num_cores_input);
+	set_ppn_regular(num_cores_input);
     }
 }
 
@@ -26,7 +26,7 @@ function fix_num_cores() {
  *
  * @param      {element}  num_cores_input  The input for num_cores
  */
-function set_ppn_owens_hugemem(num_cores_input) {
+function set_ppn_hugemem(num_cores_input) {
     const NUM_CORES = 48;
     num_cores_input.attr('max', NUM_CORES);
     num_cores_input.attr('min', NUM_CORES);
@@ -38,7 +38,7 @@ function set_ppn_owens_hugemem(num_cores_input) {
  *
  * @param      {element}  num_cores_input  The input for num_cores
  */
-function set_ppn_owens_regular(num_cores_input) {
+function set_ppn_regular(num_cores_input) {
     const NUM_CORES = 28;
     num_cores_input.attr('max', NUM_CORES);
     num_cores_input.attr('min', 1);
