@@ -1,5 +1,6 @@
 <%-
-  mem = num_cores.blank? ? 4 : num_cores.to_i * 4
+  ncpus = num_cores.blank? ? 1 : num_cores.to_i
+  mem = memory
 -%>
 ---
 batch_connect:
@@ -8,5 +9,5 @@ script:
   job_name: "mentat-kod"
   native:
     - "-l"
-    - "select=1:ncpus=<%= num_cores.blank? ? 1 : num_cores.to_i %>:mem=<%= mem %>gb"
+    - "select=1:ncpus=<%= ncpus %>:mem=<%= mem %>gb"
   email: "<%= ENV['USER'] %>@unsw.edu.au"

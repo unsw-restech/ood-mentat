@@ -4,6 +4,7 @@ form:
   - version
   - bc_num_hours
   - num_cores
+  - memory
   - bc_vnc_resolution
   - bc_email_on_started
 attributes:
@@ -20,6 +21,16 @@ attributes:
     step: 1
     help: >-
       Number of cores, 4 GB per core.
+  memory:
+    widget: number_field
+    label: "Memory (GB)"
+    value: 4
+    min: 4
+    max: 1000
+    step: 1
+    help: >-
+      Memory requests will affect your wait time.  The points at which
+      this happens are 124, 180, 248, 370, 750 and 1000.
   bc_vnc_resolution:
     required: true
   version:
