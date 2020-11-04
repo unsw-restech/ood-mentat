@@ -5,7 +5,7 @@
 batch_connect:
   template: vnc
 script:
-  job_name: "kod-mentat"
+  job_name: "mentat-kod"
   native:
     - "-l"
     - "select=1:ncpus=<%= num_cores.blank? ? 1 : num_cores.to_i %>:mem=<%= mem %>gb"
