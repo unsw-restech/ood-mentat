@@ -1,0 +1,12 @@
+---
+name: Marc Mentat
+category: Interactive Apps
+subcategory: GUIs
+role: batch_connect
+description: |
+  This application will launch a desktop graphical interface, then [Marc
+  Mentat] on the [Katana cluster].  You will be able to interact with the
+  Marc Mentat GUI through a VNC session.
+
+  [Marc Mentat]: https://www.mscsoftware.com/product/marc
+  [Katana cluster]: https://unsw-restech.github.io/restech-docs

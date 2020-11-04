@@ -1,0 +1,12 @@
+<%-
+  mem = num_cores.blank? ? 4 : num_cores.to_i * 4
+-%>
+---
+batch_connect:
+  template: vnc
+script:
+  job_name: "kod-mentat"
+  native:
+    - "-l"
+    - "select=1:ncpus=<%= num_cores.blank? ? 1 : num_cores.to_i %>:mem=<%= mem %>gb"
+  email: "<%= ENV['USER'] %>@unsw.edu.au"
