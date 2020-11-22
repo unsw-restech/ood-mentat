@@ -20,7 +20,7 @@ attributes:
     max: 48
     step: 1
     help: >-
-      Number of cores, 4 GB per core.
+      How many processor cores you need.
   memory:
     widget: number_field
     label: "Memory (GB)"
@@ -29,15 +29,16 @@ attributes:
     max: 1000
     step: 1
     help: >-
-      Memory requests will affect your wait time.  The points at which
-      this happens are 124, 180, 248, 370, 750 and 1000.
+      How much memory you need.  If the amount of memory you request goes
+      over certain thresholds, it will affect your wait time.  The points
+      at which this happens are 124, 180, 248, 370, 750 and 1000 GB.
   bc_vnc_resolution:
     required: true
   version:
     widget: select
     label: "Marc Mentat version"
     help: >-
-      This defines the version of Marc Mentat you want to use.
+      Which version of Marc Mentat you want to use.
     options:
       - [ "2019.1", "mentat/2019.1" ]
       - [ "2018.1", "mentat/2018.1" ]

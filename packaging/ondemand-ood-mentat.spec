@@ -52,3 +52,5 @@ cp -a ./. %{buildroot}%{_localstatedir}/www/ood/apps/sys/%{app_name}/
 %changelog
 * Wed Nov 04 2020 John Zaitseff <J.Zaitseff@unsw.edu.au> 1.0.0-1
 - Initial release
+* Mon Nov 23 2020 John Zaitseff <J.Zaitseff@unsw.edu.au> 1.0.1-1
+- Updated user-visible strings
