@@ -27,21 +27,7 @@ cd "${HOME}"
 # Start Marc Mentat
 #
 
-case <%= context.version %> in
-    mentat/2018.1)
-	module load intelmpi/2019.5.281
-	;;
-    mentat/2019.1)
-	module load intelmpi/2019.6.166
-	;;
-    *)
-	echo "Unknown version of Marc Mentat.  Please contact <itservicecentre@unsw.edu.au> with this error message." 1>&2
-	exit 1
-	;;
-esac
-
 module load <%= context.version %>
-
 module list
 set -x
 

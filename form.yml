@@ -40,5 +40,5 @@ attributes:
     help: >-
       Which version of Marc Mentat you want to use.
     options:
-      - [ "2019.1", "mentat/2019.1" ]
-      - [ "2018.1", "mentat/2018.1" ]
+      - [ "2019.1", "intelmpi/2019.6.166 mentat/2019.1" ]
+      - [ "2018.1", "intelmpi/2019.5.281 mentat/2018.1" ]
